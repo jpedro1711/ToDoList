@@ -1,0 +1,144 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --theme-color: #e63946;
+  --font-color: #f1faee;
+  --btn-color: #ade8f4;
+  --btn-txt: #03045e;
+  --bg-task-color: #eee2df;
+  --task-list-border: #161A1D;
+  --btn-bg-hover: #00b4d8;
+  --btn-apagar-hover: #81807d;
+}
+
+#header {
+  display: grid;
+  justify-content: center;
+  background-color: var(--theme-color);
+  color: var(--font-color);
+  padding: 1.25rem;
+  font-size: 1.875rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+#header h1{
+  text-align: center;
+}
+
+#btnAddTask {
+  background-color: var(--btn-color);
+  color: var(--btn-txt);
+  padding: 0.3125rem 0.625rem;
+  border: transparent;
+  border-radius: 0rem 0.25rem 0.25rem 0rem;
+  cursor: pointer;
+}
+
+#btnAddTask:hover {
+  cursor: pointer;
+  background-color: var(--btn-bg-hover);
+  color: var(--btn-txt);
+  transition: 0.5s;
+}
+
+#newTaskInput {
+  padding: 0.3125rem 0.625rem;
+  border: transparent;
+  border-radius: 0.25rem 0rem 0rem 0.25rem;
+}
+
+#flex {
+  display: flex;
+  gap: 0rem;
+}
+
+#flex input {
+  font-family: 'Poppins', sans-serif;
+  border: transparent;
+  font-size: 1.25rem;
+}
+
+#flex input:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+#flex button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+}
+
+section {
+  max-width: 50%;
+  margin: 0 auto;
+  margin-top: 3.125rem;
+  background-color: var(--bg-task-color);
+}
+
+.taskList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  color: var(--span-color);
+  padding: 0.625rem 1.25rem;
+  border-bottom: 0.0625rem solid var(--task-list-border);
+  cursor: pointer;
+}
+
+
+.apagar {
+  background-color: transparent;
+  border: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+}
+
+
+.apagar:hover {
+  transition: 0.5s;
+  background-color: var(--btn-apagar-hover);
+}
+
+@media (max-width: 400px) {
+  * {
+    font-size: 15px;
+  }
+
+  #header {
+    padding: .75rem;
+    min-width: 23.75rem;
+    min-height: 7rem;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-width: 370px;
+    margin-top: 0px;
+  }
+
+  section ul {
+    width: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  section {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-width: 370px;
+  }
+
+  section ul {
+    width: auto;
+  }
+}
